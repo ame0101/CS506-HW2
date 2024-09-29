@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+div {
+    margin: 10px 0;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#plot {
+    margin-top: 20px;
+    width: 80%;
+    height: 500px;
+    display: inline-block;
+}
