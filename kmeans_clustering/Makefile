@@ -1,19 +1,20 @@
 # Define your virtual environment and flask app
 VENV = venv
-FLASK_APP = app:app  # Explicitly reference the app instance in app.py
+FLASK_APP = app.py
 
-# Install dependencies
+# Install dependencies by creating a virtual environment and installing from requirements.txt
 install:
 	python3 -m venv $(VENV)
+	./$(VENV)/bin/pip install --upgrade pip
 	./$(VENV)/bin/pip install -r requirements.txt
 
 # Run the Flask application
 run:
 	FLASK_APP=$(FLASK_APP) FLASK_ENV=development ./$(VENV)/bin/flask run --port 3000
 
-# Clean up virtual environment
+# Clean up the virtual environment
 clean:
 	rm -rf $(VENV)
 
-# Reinstall all dependencies
+# Reinstall the environment and dependencies
 reinstall: clean install
