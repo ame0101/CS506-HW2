@@ -33,6 +33,11 @@ jobs:
         make run &
         sleep 10  # Sleep to allow the server to start
 
+    # Check if the application is running
+    - name: Check if application is running
+      run: |
+        curl http://localhost:3000 || exit 1
+
     # Lint the code with flake8
     - name: Lint with flake8
       run: |
